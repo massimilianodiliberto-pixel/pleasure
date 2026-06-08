@@ -76,11 +76,6 @@ img{max-width:100%;display:block}
 /* ===== intro ===== */
 #intro{position:relative;z-index:2;height:100vh;overflow:hidden;background:radial-gradient(ellipse at 28% 50%,rgba(138,111,77,.16) 0%,transparent 52%),radial-gradient(ellipse at 72% 44%,rgba(120,95,60,.10) 0%,transparent 46%)}
 #intro-canvas{position:absolute;inset:0;z-index:1;pointer-events:none;background:transparent}
-/* large atmospheric leaf top-right */
-#intro-leaf{position:absolute;right:-6vw;top:-10vh;width:66vw;max-width:500px;height:100vh;z-index:2;pointer-events:none;-webkit-mask-image:radial-gradient(ellipse at 54% 42%,rgba(0,0,0,.55) 14%,transparent 64%);mask-image:radial-gradient(ellipse at 54% 42%,rgba(0,0,0,.55) 14%,transparent 64%)}
-.il-edge{fill:rgba(180,200,150,.05);stroke:rgba(240,232,216,.14);stroke-width:.9;stroke-linecap:round;vector-effect:non-scaling-stroke}
-.il-midrib{fill:none;stroke:rgba(240,232,216,.12);stroke-width:.5;stroke-linecap:round;vector-effect:non-scaling-stroke}
-.il-vein{fill:none;stroke:rgba(240,232,216,.07);stroke-width:.35;stroke-linecap:round;vector-effect:non-scaling-stroke}
 #flora-left,#flora-right{position:absolute;top:0;bottom:0;width:30vw;min-width:130px;max-width:300px;z-index:2;pointer-events:none}
 #flora-left{left:0;-webkit-mask-image:linear-gradient(to right,black 60%,transparent 100%);mask-image:linear-gradient(to right,black 60%,transparent 100%)}
 #flora-right{right:0;-webkit-mask-image:linear-gradient(to left,black 60%,transparent 100%);mask-image:linear-gradient(to left,black 60%,transparent 100%)}
@@ -200,28 +195,6 @@ img{max-width:100%;display:block}
 <!-- ===== INTRO ===== -->
 <section id="intro">
   <canvas id="intro-canvas"></canvas>
-
-  <!-- large atmospheric leaf upper-right (static, decorative) -->
-  <svg id="intro-leaf" viewBox="0 0 400 700" preserveAspectRatio="xMidYMid meet" width="100%" height="100%">
-    <path class="il-edge" d="M200,28 C 144,54 94,134 80,226 C 66,318 82,436 200,522 C 318,436 334,318 320,226 C 306,134 256,54 200,28 Z"/>
-    <path class="il-midrib" d="M200,36 L200,512"/>
-    <path class="il-vein" d="M200,90 C 172,98 144,106 112,112"/>
-    <path class="il-vein" d="M200,90 C 228,98 256,106 288,112"/>
-    <path class="il-vein" d="M200,148 C 168,156 138,162 104,164"/>
-    <path class="il-vein" d="M200,148 C 232,156 262,162 296,164"/>
-    <path class="il-vein" d="M200,210 C 162,216 128,218 94,216"/>
-    <path class="il-vein" d="M200,210 C 238,216 272,218 306,216"/>
-    <path class="il-vein" d="M200,272 C 162,272 126,268 92,260"/>
-    <path class="il-vein" d="M200,272 C 238,272 274,268 308,260"/>
-    <path class="il-vein" d="M200,334 C 164,330 130,322 98,310"/>
-    <path class="il-vein" d="M200,334 C 236,330 270,322 302,310"/>
-    <path class="il-vein" d="M200,390 C 166,384 136,374 108,360"/>
-    <path class="il-vein" d="M200,390 C 234,384 264,374 292,360"/>
-    <path class="il-vein" d="M200,444 C 170,436 146,424 122,410"/>
-    <path class="il-vein" d="M200,444 C 230,436 254,424 278,410"/>
-    <path class="il-vein" d="M200,490 C 176,480 156,468 136,452"/>
-    <path class="il-vein" d="M200,490 C 224,480 244,468 264,452"/>
-  </svg>
 
   <!-- crossing branches with wind sway -->
   <svg id="flora-left" viewBox="0 0 280 900" preserveAspectRatio="none" width="100%" height="100%">
