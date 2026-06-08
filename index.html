@@ -74,15 +74,23 @@ img{max-width:100%;display:block}
 }
 
 /* ===== intro ===== */
-#intro{position:relative;z-index:2;height:100vh;overflow:hidden;background:#1b1b1d}
+#intro{position:relative;z-index:2;height:100vh;overflow:hidden;background:radial-gradient(ellipse at 28% 50%,rgba(138,111,77,.16) 0%,transparent 52%),radial-gradient(ellipse at 72% 44%,rgba(120,95,60,.10) 0%,transparent 46%)}
 #intro-canvas{position:absolute;inset:0;z-index:1;pointer-events:none;background:transparent}
+/* large atmospheric leaf top-right */
+#intro-leaf{position:absolute;right:-6vw;top:-10vh;width:66vw;max-width:500px;height:100vh;z-index:2;pointer-events:none;-webkit-mask-image:radial-gradient(ellipse at 54% 42%,rgba(0,0,0,.55) 14%,transparent 64%);mask-image:radial-gradient(ellipse at 54% 42%,rgba(0,0,0,.55) 14%,transparent 64%)}
+.il-edge{fill:rgba(180,200,150,.05);stroke:rgba(240,232,216,.14);stroke-width:.9;stroke-linecap:round;vector-effect:non-scaling-stroke}
+.il-midrib{fill:none;stroke:rgba(240,232,216,.12);stroke-width:.5;stroke-linecap:round;vector-effect:non-scaling-stroke}
+.il-vein{fill:none;stroke:rgba(240,232,216,.07);stroke-width:.35;stroke-linecap:round;vector-effect:non-scaling-stroke}
 #flora-left,#flora-right{position:absolute;top:0;bottom:0;width:30vw;min-width:130px;max-width:300px;z-index:2;pointer-events:none}
-#flora-left{left:0;-webkit-mask-image:linear-gradient(to right,black 48%,transparent 100%);mask-image:linear-gradient(to right,black 48%,transparent 100%)}
-#flora-right{right:0;-webkit-mask-image:linear-gradient(to left,black 48%,transparent 100%);mask-image:linear-gradient(to left,black 48%,transparent 100%)}
-.bl{fill:none;stroke:rgba(240,232,216,.36);stroke-width:1;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
-.bl-fg{fill:none;stroke:rgba(240,232,216,.52);stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
-.bl-lf{fill:none;stroke:rgba(240,232,216,.44);stroke-width:.8;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
-#intro::after{content:'';position:absolute;left:0;right:0;bottom:0;height:22vh;background:linear-gradient(to bottom,rgba(27,27,29,0) 0%,#1b1b1d 100%);z-index:5;pointer-events:none}
+#flora-left{left:0;-webkit-mask-image:linear-gradient(to right,black 60%,transparent 100%);mask-image:linear-gradient(to right,black 60%,transparent 100%)}
+#flora-right{right:0;-webkit-mask-image:linear-gradient(to left,black 60%,transparent 100%);mask-image:linear-gradient(to left,black 60%,transparent 100%)}
+.bl-fg{fill:none;stroke:rgba(240,232,216,.46);stroke-width:1.0;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.bl-lf{fill:none;stroke:rgba(240,232,216,.38);stroke-width:.7;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+@keyframes sway-l{0%,100%{transform:rotate(0deg)}18%{transform:rotate(-1.3deg) skewX(-.4deg)}36%{transform:rotate(.4deg)}52%{transform:rotate(-2.8deg) skewX(-.7deg)}68%{transform:rotate(.6deg)}84%{transform:rotate(-1.1deg)}}
+@keyframes sway-r{0%,100%{transform:rotate(0deg)}18%{transform:rotate(1.3deg) skewX(.4deg)}36%{transform:rotate(-.4deg)}52%{transform:rotate(2.8deg) skewX(.7deg)}68%{transform:rotate(-.6deg)}84%{transform:rotate(1.1deg)}}
+.sway-l{transform-origin:60px 900px;animation:sway-l 11.4s ease-in-out infinite}
+.sway-r{transform-origin:220px 900px;animation:sway-r 10.2s ease-in-out infinite;animation-delay:-4.1s}
+#intro::after{content:'';position:absolute;left:0;right:0;bottom:0;height:32vh;background:linear-gradient(to bottom,rgba(27,27,29,0) 0%,rgba(27,27,29,.96) 78%,rgba(27,27,29,1) 100%);z-index:5;pointer-events:none}
 #intro-logo{position:absolute;left:50%;top:16%;transform:translateX(-50%);z-index:4;width:min(500px,72vw);opacity:0;animation:ifade 2.2s .4s cubic-bezier(.16,1,.3,1) forwards}
 #intro-logo img{width:100%;filter:drop-shadow(0 6px 32px rgba(184,149,106,.22))}
 #intro-manifesto{position:absolute;left:50%;top:56%;transform:translateX(-50%);z-index:4;text-align:center;white-space:nowrap}
@@ -193,135 +201,59 @@ img{max-width:100%;display:block}
 <section id="intro">
   <canvas id="intro-canvas"></canvas>
 
-  <!-- Botanical left: background trees + foreground branch with drawn leaves -->
-  <svg id="flora-left" viewBox="0 0 280 900" preserveAspectRatio="xMinYMid meet" width="100%" height="100%">
-    <!-- bg tree 1 -->
-    <path class="bl" d="M148 900 C144 800 140 688 137 576 C134 466 131 374 128 262 C126 190 124 126 122 46" opacity=".4"/>
-    <path class="bl" d="M137 576 C118 556 96 542 60 536" opacity=".33"/>
-    <path class="bl" d="M134 466 C112 446 82 432 44 426" opacity=".3"/>
-    <path class="bl" d="M131 374 C150 352 172 338 208 332" opacity=".28"/>
-    <path class="bl" d="M128 262 C148 240 168 226 200 220" opacity=".26"/>
-    <path class="bl" d="M128 262 C104 240 74 226 36 220" opacity=".26"/>
-    <!-- bg tree 2 -->
-    <path class="bl" d="M62 900 C59 818 56 734 54 642 C52 562 50 498 47 412" opacity=".3"/>
-    <path class="bl" d="M54 642 C38 622 20 612 -2 608" opacity=".24"/>
-    <path class="bl" d="M51 514 C34 496 16 486 -6 482" opacity=".22"/>
-    <!-- foreground branch: enters lower-left, sweeps up-right -->
-    <path class="bl-fg" d="M-10 732 C22 664 65 566 106 460 C134 384 160 316 178 242 C190 192 198 150 204 102"/>
-    <path class="bl-fg" d="M94 488 C118 466 146 450 178 444"/>
-    <path class="bl-fg" d="M145 370 C164 348 184 332 206 320"/>
-    <path class="bl-fg" d="M178 242 C160 226 138 216 112 210"/>
-    <!-- leaves pos 1 ~(20,700) -->
-    <path class="bl-lf" d="M20 700 C12 694,8 684,14 676 C20 684,24 694,20 700"/>
-    <path class="bl-lf" d="M20 700 L14 676"/>
-    <path class="bl-lf" d="M22 698 C30 692,34 682,28 674 C22 682,18 692,22 698"/>
-    <path class="bl-lf" d="M22 698 L28 674"/>
-    <!-- leaves pos 2 ~(56,598) -->
-    <path class="bl-lf" d="M55 600 C47 594,43 584,49 576 C55 584,59 594,55 600"/>
-    <path class="bl-lf" d="M55 600 L49 576"/>
-    <path class="bl-lf" d="M58 598 C66 592,70 582,64 574 C58 582,54 592,58 598"/>
-    <path class="bl-lf" d="M58 598 L64 574"/>
-    <path class="bl-lf" d="M56 600 C48 592,48 580,56 572 C64 580,64 592,56 600"/>
-    <path class="bl-lf" d="M56 600 L56 572"/>
-    <!-- leaves junction ~(94,488) -->
-    <path class="bl-lf" d="M92 490 C84 484,80 474,86 466 C92 474,96 484,92 490"/>
-    <path class="bl-lf" d="M92 490 L86 466"/>
-    <path class="bl-lf" d="M96 488 C104 482,108 472,102 464 C96 472,92 482,96 488"/>
-    <path class="bl-lf" d="M96 488 L102 464"/>
-    <path class="bl-lf" d="M94 490 C86 482,86 470,94 462 C102 470,102 482,94 490"/>
-    <path class="bl-lf" d="M94 490 L94 462"/>
-    <!-- leaves ~(130,414) -->
-    <path class="bl-lf" d="M128 416 C120 410,116 400,122 392 C128 400,132 410,128 416"/>
-    <path class="bl-lf" d="M128 416 L122 392"/>
-    <path class="bl-lf" d="M132 414 C140 408,144 398,138 390 C132 398,128 408,132 414"/>
-    <path class="bl-lf" d="M132 414 L138 390"/>
-    <!-- branch A end ~(178,444) -->
-    <path class="bl-lf" d="M176 446 C168 440,164 430,170 422 C176 430,180 440,176 446"/>
-    <path class="bl-lf" d="M176 446 L170 422"/>
-    <path class="bl-lf" d="M180 444 C188 438,192 428,186 420 C180 428,176 438,180 444"/>
-    <path class="bl-lf" d="M180 444 L186 420"/>
-    <path class="bl-lf" d="M178 446 C170 438,170 426,178 418 C186 426,186 438,178 446"/>
-    <path class="bl-lf" d="M178 446 L178 418"/>
-    <!-- branch B end ~(206,320) -->
-    <path class="bl-lf" d="M204 322 C196 316,192 306,198 298 C204 306,208 316,204 322"/>
-    <path class="bl-lf" d="M204 322 L198 298"/>
-    <path class="bl-lf" d="M208 320 C216 314,220 304,214 296 C208 304,204 314,208 320"/>
-    <path class="bl-lf" d="M208 320 L214 296"/>
-    <!-- branch C end ~(112,210) -->
-    <path class="bl-lf" d="M110 212 C102 206,98 196,104 188 C110 196,114 206,110 212"/>
-    <path class="bl-lf" d="M110 212 L104 188"/>
-    <path class="bl-lf" d="M114 210 C122 204,126 194,120 186 C114 194,110 204,114 210"/>
-    <path class="bl-lf" d="M114 210 L120 186"/>
-    <!-- top ~(204,102) -->
-    <path class="bl-lf" d="M202 104 C194 98,190 88,196 80 C202 88,206 98,202 104" opacity=".78"/>
-    <path class="bl-lf" d="M202 104 L196 80" opacity=".78"/>
-    <path class="bl-lf" d="M206 102 C214 96,218 86,212 78 C206 86,202 96,206 102" opacity=".78"/>
-    <path class="bl-lf" d="M206 102 L212 78" opacity=".78"/>
-    <!-- fern at base -->
-    <path class="bl" d="M120 900 C110 870 94 846 74 830 C54 814 28 808 8 814" opacity=".5"/>
-    <path class="bl-lf" d="M50 836 C46 822,50 812,58 810 C58 820,54 830,50 836"/>
-    <path class="bl-lf" d="M50 836 L58 810"/>
-    <path class="bl-lf" d="M38 830 C32 816,36 806,44 804 C46 816,42 826,38 830"/>
-    <path class="bl-lf" d="M38 830 L44 804"/>
-    <!-- wildflower -->
-    <path class="bl" d="M235 900 C230 834 224 768 215 702 C208 652 200 608 192 566" opacity=".6"/>
-    <path class="bl-lf" d="M192 566 C184 554,182 542,188 534 C194 542,196 554,192 566"/>
-    <path class="bl-lf" d="M192 566 C200 554,202 542,196 534 C190 542,188 554,192 566"/>
-    <path class="bl-lf" d="M192 566 C180 560,176 550,182 542 C188 548,192 558,192 566"/>
-    <path class="bl-lf" d="M192 566 C204 560,208 550,202 542 C196 548,192 558,192 566"/>
-    <!-- grass -->
-    <path class="bl" d="M20 900 C16 870 8 846 -2 836" opacity=".4"/>
-    <path class="bl" d="M36 900 C33 872 26 850 18 840" opacity=".36"/>
+  <!-- large atmospheric leaf upper-right (static, decorative) -->
+  <svg id="intro-leaf" viewBox="0 0 400 700" preserveAspectRatio="xMidYMid meet" width="100%" height="100%">
+    <path class="il-edge" d="M200,28 C 144,54 94,134 80,226 C 66,318 82,436 200,522 C 318,436 334,318 320,226 C 306,134 256,54 200,28 Z"/>
+    <path class="il-midrib" d="M200,36 L200,512"/>
+    <path class="il-vein" d="M200,90 C 172,98 144,106 112,112"/>
+    <path class="il-vein" d="M200,90 C 228,98 256,106 288,112"/>
+    <path class="il-vein" d="M200,148 C 168,156 138,162 104,164"/>
+    <path class="il-vein" d="M200,148 C 232,156 262,162 296,164"/>
+    <path class="il-vein" d="M200,210 C 162,216 128,218 94,216"/>
+    <path class="il-vein" d="M200,210 C 238,216 272,218 306,216"/>
+    <path class="il-vein" d="M200,272 C 162,272 126,268 92,260"/>
+    <path class="il-vein" d="M200,272 C 238,272 274,268 308,260"/>
+    <path class="il-vein" d="M200,334 C 164,330 130,322 98,310"/>
+    <path class="il-vein" d="M200,334 C 236,330 270,322 302,310"/>
+    <path class="il-vein" d="M200,390 C 166,384 136,374 108,360"/>
+    <path class="il-vein" d="M200,390 C 234,384 264,374 292,360"/>
+    <path class="il-vein" d="M200,444 C 170,436 146,424 122,410"/>
+    <path class="il-vein" d="M200,444 C 230,436 254,424 278,410"/>
+    <path class="il-vein" d="M200,490 C 176,480 156,468 136,452"/>
+    <path class="il-vein" d="M200,490 C 224,480 244,468 264,452"/>
   </svg>
 
-  <!-- Botanical right: mirror foreground branch with leaves -->
-  <svg id="flora-right" viewBox="0 0 280 900" preserveAspectRatio="xMaxYMid meet" width="100%" height="100%">
-    <!-- bg tree 1 -->
-    <path class="bl" d="M132 900 C136 800 140 688 143 576 C146 466 149 374 152 262 C154 190 156 126 158 46" opacity=".4"/>
-    <path class="bl" d="M143 576 C162 556 184 542 220 536" opacity=".33"/>
-    <path class="bl" d="M146 466 C168 446 198 432 236 426" opacity=".3"/>
-    <path class="bl" d="M149 374 C130 352 108 338 72 332" opacity=".28"/>
-    <path class="bl" d="M152 262 C132 240 112 226 80 220" opacity=".26"/>
-    <path class="bl" d="M152 262 C176 240 206 226 244 220" opacity=".26"/>
-    <!-- bg tree 2 -->
-    <path class="bl" d="M218 900 C221 818 224 734 226 642 C228 562 230 498 233 412" opacity=".3"/>
-    <path class="bl" d="M226 642 C242 622 260 612 282 608" opacity=".24"/>
-    <path class="bl" d="M229 514 C246 496 264 486 286 482" opacity=".22"/>
-    <!-- foreground branch: enters lower-right, sweeps up-left -->
-    <path class="bl-fg" d="M290 732 C258 664 215 566 174 460 C146 384 120 316 102 242 C90 192 82 150 76 102"/>
-    <path class="bl-fg" d="M186 488 C162 466 134 450 102 444"/>
-    <path class="bl-fg" d="M135 370 C116 348 96 332 74 320"/>
-    <path class="bl-fg" d="M102 242 C120 226 142 216 168 210"/>
-    <!-- leaves pos 1 ~(260,700) -->
-    <path class="bl-lf" d="M260 700 C268 694,272 684,266 676 C260 684,256 694,260 700"/>
-    <path class="bl-lf" d="M260 700 L266 676"/>
-    <path class="bl-lf" d="M258 698 C250 692,246 682,252 674 C258 682,262 692,258 698"/>
-    <path class="bl-lf" d="M258 698 L252 674"/>
-    <!-- leaves pos 2 ~(224,598) -->
-    <path class="bl-lf" d="M225 600 C233 594,237 584,231 576 C225 584,221 594,225 600"/>
-    <path class="bl-lf" d="M225 600 L231 576"/>
-    <path class="bl-lf" d="M222 598 C214 592,210 582,216 574 C222 582,226 592,222 598"/>
-    <path class="bl-lf" d="M222 598 L216 574"/>
-    <path class="bl-lf" d="M224 600 C232 592,232 580,224 572 C216 580,216 592,224 600"/>
-    <path class="bl-lf" d="M224 600 L224 572"/>
-    <!-- leaves junction ~(186,488) -->
-    <path class="bl-lf" d="M188 490 C196 484,200 474,194 466 C188 474,184 484,188 490"/>
-    <path class="bl-lf" d="M188 490 L194 466"/>
-    <path class="bl-lf" d="M184 488 C176 482,172 472,178 464 C184 472,188 482,184 488"/>
-    <path class="bl-lf" d="M184 488 L178 464"/>
-    <path class="bl-lf" d="M186 490 C194 482,194 470,186 462 C178 470,178 482,186 490"/>
-    <path class="bl-lf" d="M186 490 L186 462"/>
-    <!-- leaves ~(150,414) -->
-    <path class="bl-lf" d="M152 416 C160 410,164 400,158 392 C152 400,148 410,152 416"/>
-    <path class="bl-lf" d="M152 416 L158 392"/>
-    <path class="bl-lf" d="M148 414 C140 408,136 398,142 390 C148 398,152 408,148 414"/>
-    <path class="bl-lf" d="M148 414 L142 390"/>
-    <!-- branch A end ~(102,444) -->
-    <path class="bl-lf" d="M104 446 C112 440,116 430,110 422 C104 430,100 440,104 446"/>
-    <path class="bl-lf" d="M104 446 L110 422"/>
-    <path class="bl-lf" d="M100 444 C92 438,88 428,94 420 C100 428,104 438,100 444"/>
-    <path class="bl-lf" d="M100 444 L94 420"/>
-    <path class="bl-lf" d="M102 446 C110 438,110 426,102 418 C94 426,94 438,102 446"/>
+  <!-- crossing branches with wind sway -->
+  <svg id="flora-left" viewBox="0 0 280 900" preserveAspectRatio="none" width="100%" height="100%">
+    <g id="fl-near-l"><g class="sway-l">
+      <path class="bl-fg" d="M-14 548 C18 522 56 492 96 460 C138 428 180 396 220 366 C246 348 262 334 270 316"/>
+      <path class="bl-fg" d="M88 466 C78 446 64 426 48 412 C38 404 28 402 20 406" opacity=".72"/>
+      <path class="bl-lf" d="M18 406 C8 394 10 380 20 378 C30 382 34 396 30 408 C26 416 18 418 18 406"/>
+      <path class="bl-lf" d="M18 406 L20 378"/>
+      <path class="bl-lf" d="M26 408 C36 396 36 382 26 378 C16 384 14 398 18 408 C20 416 26 416 26 408"/>
+      <path class="bl-lf" d="M26 408 L26 378"/>
+      <path class="bl-fg" d="M202 372 C188 352 170 332 152 318 C138 308 124 304 114 308" opacity=".72"/>
+      <path class="bl-lf" d="M112 308 C100 296 102 282 112 280 C122 284 126 298 122 310 C118 318 112 320 112 308"/>
+      <path class="bl-lf" d="M112 308 L112 280"/>
+      <path class="bl-lf" d="M120 310 C132 298 132 284 122 280 C112 286 110 300 114 310 C116 318 120 318 120 310"/>
+      <path class="bl-lf" d="M120 310 L122 280"/>
+    </g></g>
+  </svg>
+  <svg id="flora-right" viewBox="0 0 280 900" preserveAspectRatio="none" width="100%" height="100%">
+    <g id="fl-near-r"><g class="sway-r">
+      <path class="bl-fg" d="M294 548 C262 522 224 492 184 460 C142 428 100 396 60 366 C34 348 18 334 10 316"/>
+      <path class="bl-fg" d="M192 466 C202 446 216 426 232 412 C242 404 252 402 260 406" opacity=".72"/>
+      <path class="bl-lf" d="M262 406 C272 394 270 380 260 378 C250 382 246 396 250 408 C254 416 262 418 262 406"/>
+      <path class="bl-lf" d="M262 406 L260 378"/>
+      <path class="bl-lf" d="M254 408 C244 396 244 382 254 378 C264 384 266 398 262 408 C260 416 254 416 254 408"/>
+      <path class="bl-lf" d="M254 408 L254 378"/>
+      <path class="bl-fg" d="M78 372 C92 352 110 332 128 318 C142 308 156 304 166 308" opacity=".72"/>
+      <path class="bl-lf" d="M168 308 C180 296 178 282 168 280 C158 284 154 298 158 310 C162 318 168 320 168 308"/>
+      <path class="bl-lf" d="M168 308 L168 280"/>
+      <path class="bl-lf" d="M160 310 C148 298 148 284 158 280 C168 286 170 300 166 310 C164 318 160 318 160 310"/>
+      <path class="bl-lf" d="M160 310 L158 280"/>
+    </g></g>
+  </svg>
     <path class="bl-lf" d="M102 446 L102 418"/>
     <!-- branch B end ~(74,320) -->
     <path class="bl-lf" d="M76 322 C84 316,88 306,82 298 C76 306,72 316,76 322"/>
@@ -345,18 +277,8 @@ img{max-width:100%;display:block}
     <path class="bl-lf" d="M242 830 C248 816,244 806,236 804 C234 816,238 826,242 830"/>
     <path class="bl-lf" d="M242 830 L236 804"/>
     <!-- wildflower -->
-    <path class="bl" d="M45 900 C50 834 56 768 65 702 C72 652 80 608 88 566" opacity=".6"/>
-    <path class="bl-lf" d="M88 566 C96 554,98 542,92 534 C86 542,84 554,88 566"/>
-    <path class="bl-lf" d="M88 566 C80 554,78 542,84 534 C90 542,92 554,88 566"/>
-    <path class="bl-lf" d="M88 566 C100 560,104 550,98 542 C92 548,88 558,88 566"/>
-    <path class="bl-lf" d="M88 566 C76 560,72 550,78 542 C84 548,88 558,88 566"/>
-    <!-- grass -->
-    <path class="bl" d="M260 900 C264 870 272 846 282 836" opacity=".4"/>
-    <path class="bl" d="M244 900 C247 872 254 850 262 840" opacity=".36"/>
-  </svg>
 
-  <!-- Logo top -->
-  <div id="intro-logo"><img src="assets/logo-pleasure-crop.png" alt="PLEASURE Professional Luxury" /></div>
+  <div id="intro-logo"><img src="assets/logo-pleasure-crop.png" alt="PLEASURE Professional Luxury"/></div>
 
   <!-- Manifesto text -->
   <div id="intro-manifesto">
@@ -616,6 +538,16 @@ img{max-width:100%;display:block}
     requestAnimationFrame(tick);
   }
   tick();
+})();
+
+/* ---------- flora parallax ---------- */
+(function(){
+  const nearL=document.getElementById('fl-near-l'),nearR=document.getElementById('fl-near-r');
+  let tx=0,ty=0,cx=0,cy=0;
+  addEventListener('mousemove',e=>{tx=e.clientX/innerWidth-.5;ty=e.clientY/innerHeight-.5;});
+  addEventListener('touchmove',e=>{tx=e.touches[0].clientX/innerWidth-.5;ty=e.touches[0].clientY/innerHeight-.5;},{passive:true});
+  function px(){cx+=(tx-cx)*.055;cy+=(ty-cy)*.055;const n=24;if(nearL)nearL.style.transform=`translate(${cx*n}px,${cy*n*.5}px)`;if(nearR)nearR.style.transform=`translate(${cx*n}px,${cy*n*.5}px)`;requestAnimationFrame(px);}
+  px();
 })();
 
 /* ---------- cursor ---------- */
