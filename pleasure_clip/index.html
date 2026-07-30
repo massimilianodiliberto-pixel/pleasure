@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PLEASURE Professional Luxury · Franciacorta, Italia</title>
+<meta name="description" content="Dalla terra, prima che dal laboratorio. PLEASURE Professional Luxury — haircare professionale luxury biotech, Franciacorta." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@200;300;400&family=JetBrains+Mono:wght@300&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#1A1A1C;
+  --bg-alt:#1E1E20;
+  --gold:#B8956A;
+  --gold-l:#D4B283;
+  --cream:#F0E8D8;
+  --muted:#888880;
+  --line:rgba(240,232,216,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:auto}
+body{background:var(--bg);color:var(--cream);font-family:'Inter',sans-serif;font-weight:300;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img,video{max-width:100%;display:block}
+::selection{background:var(--gold);color:var(--bg)}
+
+/* ===== NAV ===== */
+.nav{position:fixed;top:0;left:0;right:0;z-index:90;display:flex;justify-content:space-between;align-items:center;height:60px;padding:0 40px;transition:background .5s,backdrop-filter .5s,border-color .5s;border-bottom:1px solid transparent}
+.nav.scrolled{background:rgba(26,26,28,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom-color:var(--line)}
+.nav .brand{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:18px;letter-spacing:.22em;display:flex;align-items:baseline;gap:.1em}
+.nav .brand .dia{width:5px;height:5px;background:var(--gold);transform:rotate(45deg);display:inline-block;margin:0 1px}
+.nav .menu{display:flex;gap:30px;list-style:none}
+.nav .menu button{background:none;border:none;cursor:pointer;font-family:inherit;font-size:13px;color:var(--cream);opacity:.72;transition:opacity .3s;padding:6px 0}
+.nav .menu button:hover,.nav .menu button:focus-visible{opacity:1}
+.nav .right{display:flex;align-items:center;gap:24px}
+.nav .cta{font-size:12px;letter-spacing:.05em;color:var(--gold-l);border:1px solid var(--gold);padding:9px 17px;border-radius:999px;transition:background .4s,color .4s}
+.nav .cta:hover{background:var(--gold);color:var(--bg)}
+.nav .lang{display:flex;gap:10px;font-size:12px;color:var(--muted)}
+.nav .lang button{background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;color:var(--muted);transition:color .3s}
+.nav .lang button.on,.nav .lang button:hover{color:var(--cream)}
+
+/* ===== FILM ===== */
+#film{position:relative}
+.stage{position:sticky;top:0;height:100vh;overflow:hidden;background:var(--bg);z-index:1}
+.stage video,.stage .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .28s linear}
+.stage video.on,.stage .poster.on{opacity:1}
+.stage::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom,rgba(26,26,28,.55) 0%,rgba(26,26,28,0) 26%,rgba(26,26,28,0) 40%,rgba(26,26,28,.92) 88%,var(--bg) 100%)}
+
+/* chapter copy */
+.chapters{position:fixed;left:0;right:0;bottom:0;height:46vh;z-index:60;pointer-events:none;overflow:hidden;opacity:0;transition:opacity .5s}
+.chapters.live{opacity:1}
+.chapter{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 max(56px,5vw) 4vh;opacity:0;will-change:transform,opacity}
+.chapter .eyebrow{font-family:'JetBrains Mono',monospace;font-weight:300;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.chapter h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(32px,4vw,56px);line-height:1.04;color:var(--cream);margin-bottom:16px;max-width:16em}
+.chapter h2 em{font-style:italic;color:var(--gold-l)}
+.chapter p{font-size:17px;line-height:1.55;color:var(--muted);max-width:34em}
+
+.progress{position:fixed;left:0;bottom:0;height:1px;background:var(--gold);z-index:80;width:0;opacity:0;transition:opacity .5s}
+.progress.live{opacity:1}
+
+/* ===== LINEE ===== */
+.sect{position:relative;z-index:5;background:var(--bg);padding:150px 40px}
+.sect .head{max-width:1200px;margin:0 auto 64px;text-align:center}
+.sect .head h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(32px,4vw,56px);line-height:1.06;margin-bottom:14px}
+.sect .head h2 em{font-style:italic;color:var(--gold-l)}
+.sect .head p{color:var(--muted);font-size:17px}
+.lines{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.line{position:relative;border-radius:2px;padding:44px 30px 38px;min-height:420px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.line:hover{transform:translateY(-6px)}
+.line .kicker{font-family:'JetBrains Mono',monospace;font-weight:300;font-size:10px;letter-spacing:.2em;text-transform:uppercase;opacity:.75;margin-bottom:12px}
+.line h3{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:29px;line-height:1.1;margin-bottom:10px}
+.line p{font-size:15px;line-height:1.5;opacity:.8}
+.line.filler{background:linear-gradient(165deg,#141416 0%,#0f0f10 100%);color:var(--gold-l);border:1px solid rgba(184,149,106,.28)}
+.line.lifetime{background:#6B8F71;color:#F4F1E8}
+.line.vinility{background:#7B6B9A;color:#F4F1E8}
+.line.rituals{background:#888880;color:#1A1A1C}
+
+/* ===== COMMUNITY ===== */
+.community{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:56px}
+.block h3{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:31px;margin-bottom:14px}
+.block h3 em{font-style:italic;color:var(--gold-l)}
+.block p{color:var(--muted);font-size:16px;line-height:1.6}
+
+/* ===== FOOTER ===== */
+.foot{background:linear-gradient(180deg,var(--bg-alt) 0%,var(--bg) 100%);padding:120px 40px 50px;position:relative;z-index:5}
+.foot .grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;padding-bottom:60px;border-bottom:1px solid var(--line)}
+.news h3{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:40px;line-height:1.02;margin-bottom:16px}
+.news h3 em{font-style:italic;color:var(--gold-l)}
+.news p{color:var(--muted);max-width:380px;margin-bottom:22px;font-size:16px}
+.news form{display:flex;border-bottom:1px solid var(--cream);max-width:380px}
+.news input{flex:1;background:transparent;border:none;color:var(--cream);padding:12px 0;font-size:15px;outline:none;font-family:inherit}
+.news input::placeholder{color:var(--muted)}
+.news button{background:transparent;border:none;color:var(--cream);font-size:13px;cursor:pointer;padding:0 0 0 16px;font-family:inherit}
+.col h4{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:var(--gold-l);margin-bottom:16px}
+.col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.col a{font-size:14px;opacity:.76;transition:opacity .3s,color .3s}
+.col a:hover{opacity:1;color:var(--gold-l)}
+.below{max-width:1200px;margin:28px auto 0;display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+
+@media (max-width:900px){
+  .nav{padding:0 20px}
+  .nav .menu{display:none}
+  .chapters{height:52vh}
+  .chapter{padding:0 22px 3vh}
+  .chapter h2{font-size:clamp(26px,6.4vw,36px)}
+  .chapter p{font-size:15px}
+  .sect{padding:96px 20px}
+  .lines,.community{grid-template-columns:1fr;gap:20px}
+  .line{min-height:300px}
+  .foot{padding:80px 20px 40px}
+  .foot .grid{grid-template-columns:1fr;gap:40px}
+  .below{flex-direction:column;gap:10px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .stage{position:relative;height:auto}
+  .stage video{display:none}
+  .stage .poster{position:relative;opacity:1;height:62vh}
+  .stage::after{display:none}
+  .chapters{position:relative;height:auto;opacity:1;pointer-events:auto}
+  .chapter{position:relative;opacity:1!important;transform:none!important;padding:44px 22px 72px}
+  .progress{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="brand">PLE<span class="dia"></span>SURE</div>
+  <ul class="menu">
+    <li><button data-go="0">Origine</button></li>
+    <li><button data-go="1">Scienza</button></li>
+    <li><button data-go="2">Metodo</button></li>
+    <li><button data-go="3">Academy</button></li>
+    <li><button data-go="4">Rituali</button></li>
+    <li><button data-go="5">Linee</button></li>
+    <li><button data-go="6">Family</button></li>
+  </ul>
+  <div class="right">
+    <a class="cta" href="#linee">Scopri le Linee</a>
+    <div class="lang">
+      <button class="on" aria-current="true">IT</button><button>EN</button><button>ES</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== IL FILM ===== -->
+<section id="film" aria-label="Il viaggio della goccia">
+  <div class="stage" id="stage" aria-hidden="true"></div>
+</section>
+
+<div class="chapters" id="chapters">
+  <article class="chapter" data-ch="0">
+    <div class="eyebrow">L'Origine</div>
+    <h2>Dalla terra,<br/>prima che dal <em>laboratorio.</em></h2>
+    <p>PLEASURE non estrae dalla natura. La ascolta. E impara a restituirle qualcosa in cambio.</p>
+  </article>
+  <article class="chapter" data-ch="1">
+    <div class="eyebrow">La Scienza</div>
+    <h2>La <em>natura</em> ha già<br/>la risposta.</h2>
+    <p>Le biotecnologie avanzate la liberano, la esprimono, la potenziano.</p>
+  </article>
+  <article class="chapter" data-ch="2">
+    <div class="eyebrow">Il Metodo</div>
+    <h2>Questo non è un prodotto.<br/>È un <em>metodo.</em></h2>
+    <p>Un sistema vivo. Generativo. In evoluzione. Tuo.</p>
+  </article>
+  <article class="chapter" data-ch="3">
+    <div class="eyebrow">Academy</div>
+    <h2>Non eleviamo prodotti.<br/><em>Eleviamo</em> professionisti.</h2>
+    <p>Il tuo salone non è un cliente. È un laboratorio vivo. La conoscenza è un privilegio che si coltiva insieme.</p>
+  </article>
+  <article class="chapter" data-ch="4">
+    <div class="eyebrow">Rituali</div>
+    <h2>Il gesto<br/>diventa <em>rito.</em></h2>
+    <p>Non protocolli, ma percorsi. Ogni rituale è un viaggio tattile e olfattivo che il cliente porta con sé.</p>
+  </article>
+  <article class="chapter" data-ch="5">
+    <div class="eyebrow">Le Linee</div>
+    <h2>Quattro linee.<br/>Una <em>sola logica.</em></h2>
+    <p>Filler, Lifetime, Vinility, Restruct. Ogni formula parla una lingua precisa al capello.</p>
+  </article>
+  <article class="chapter" data-ch="6">
+    <div class="eyebrow">Family</div>
+    <h2>Entra nel<br/><em>Circolo.</em></h2>
+    <p>Quattro lettere all'anno. Note dal laboratorio, inviti privati, il prossimo capitolo del metodo.</p>
+  </article>
+</div>
+
+<div class="progress" id="progress"></div>
+
+<!-- ===== LE LINEE ===== -->
+<section class="sect" id="linee">
+  <div class="head">
+    <h2>Di cosa ha bisogno<br/>il tuo <em>cliente oggi?</em></h2>
+    <p>Scegli per bisogno — mai per nome.</p>
+  </div>
+  <div class="lines">
+    <article class="line filler">
+      <div class="kicker">Hair Color System</div>
+      <h3>Filler Pure Oil</h3>
+      <p>La struttura che precede il colore.</p>
+    </article>
+    <article class="line lifetime">
+      <div class="kicker">Il rituale della cute</div>
+      <h3>Lifetime<br/>Natural Evolution</h3>
+      <p>Equilibrio, giorno dopo giorno.</p>
+    </article>
+    <article class="line vinility">
+      <div class="kicker">Colore e struttura</div>
+      <h3>Vinility</h3>
+      <p>Il colore che tiene, la fibra che regge.</p>
+    </article>
+    <article class="line rituals">
+      <div class="kicker">I rituali firma</div>
+      <h3>Luxury Rituals</h3>
+      <p>Il gesto che il cliente porta con sé.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ===== LA COMMUNITY ===== -->
+<section class="sect" style="background:var(--bg-alt)">
+  <div class="head">
+    <h2>Non un cliente.<br/>Un <em>laboratorio vivo.</em></h2>
+  </div>
+  <div class="community">
+    <div class="block">
+      <h3><em>Academy</em></h3>
+      <p>Non impari una tecnica. Impari una lingua. Formazione continua, in sala e in laboratorio.</p>
+    </div>
+    <div class="block">
+      <h3><em>Ricerca</em></h3>
+      <p>Iperfermentazione, peptidi intelligenti dell'avena, anionici a doppio strato molecolare. Ascoltiamo a livello molecolare.</p>
+    </div>
+    <div class="block">
+      <h3><em>Atelier</em></h3>
+      <p>Il luogo dove il metodo prende forma sulle persone. Su appuntamento, in Franciacorta.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="foot">
+  <div class="grid">
+    <div class="news">
+      <h3>Entra nel<br/><em>Circolo →</em></h3>
+      <p>Quattro lettere all'anno. Note dal laboratorio, inviti privati, il prossimo capitolo del metodo.</p>
+      <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Iscritta ✓'">
+        <input type="email" placeholder="la tua email professionale" required aria-label="Email" />
+        <button type="submit">Iscriviti →</button>
+      </form>
+    </div>
+    <div class="col"><h4>Maison</h4><ul><li><a href="#">Manifesto</a></li><li><a href="#">Laboratorio</a></li><li><a href="#">Franciacorta</a></li></ul></div>
+    <div class="col"><h4>Method</h4><ul><li><a href="#">Academy</a></li><li><a href="#">Atelier</a></li><li><a href="#">Ricerca</a></li></ul></div>
+    <div class="col"><h4>Connect</h4><ul><li><a href="#">Apri un salone</a></li><li><a href="#">Concierge</a></li><li><a href="#">Contatti</a></li></ul></div>
+  </div>
+  <div class="below">
+    <span>© MMXXVI · Pleasure Professional Luxury · Franciacorta, Italia</span>
+    <span>IT · EN · ES</span>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   SCROLL-SCRUB — 7 clip, una per sezione.
+   Ogni clip è nominata con la sezione in cui TERMINA.
+   ============================================================ */
+const SCENES = [
+  {id:'origine',  clip:'media/origine.mp4',  poster:'media/origine.jpg'},
+  {id:'scienza',  clip:'media/scienza.mp4',  poster:'media/scienza.jpg'},
+  {id:'metodo',   clip:'media/metodo.mp4',   poster:'media/metodo.jpg'},
+  {id:'academy',  clip:'media/academy.mp4',  poster:'media/academy.jpg'},
+  {id:'rituali',  clip:'media/rituali.mp4',  poster:'media/rituali.jpg'},
+  {id:'linee',    clip:'media/linee.mp4',    poster:'media/linee.jpg'},
+  {id:'family',   clip:'media/family.mp4',   poster:'media/family.jpg'}
+];
+
+/* altezza di scroll per capitolo: più alta = lettura più lenta */
+const VH_PER_SCENE = 165;
+
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const film      = document.getElementById('film');
+const stage     = document.getElementById('stage');
+const chaptersEl= document.getElementById('chapters');
+const chapters  = [...document.querySelectorAll('.chapter')];
+const progress  = document.getElementById('progress');
+const nav       = document.getElementById('nav');
+
+film.style.height = (SCENES.length * VH_PER_SCENE) + 'vh';
+
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const smooth=t=>t*t*(3-2*t);
+const lerp=(a,b,t)=>a+(b-a)*t;
+
+/* ---- costruzione dei layer ---- */
+const layers = SCENES.map((s,i)=>{
+  const poster=document.createElement('img');
+  poster.className='poster'; poster.src=s.poster; poster.alt='';
+  poster.decoding='async'; poster.loading = i<2 ? 'eager' : 'lazy';
+  stage.appendChild(poster);
+
+  let video=null;
+  if(!reduced){
+    video=document.createElement('video');
+    video.muted=true; video.playsInline=true; video.preload='none';
+    video.setAttribute('muted',''); video.setAttribute('playsinline','');
+    stage.appendChild(video);
+  }
+  return {...s, poster, video, loaded:false, ready:false, painted:false};
+});
+
+/* ---- caricamento pigro: la scena attiva e le vicine ---- */
+function ensureLoaded(i){
+  const L=layers[i];
+  if(!L || !L.video || L.loaded) return;
+  L.loaded=true;
+  fetch(L.clip)
+    .then(r=>{ if(!r.ok) throw new Error(r.status); return r.blob(); })
+    .then(b=>{
+      L.video.src=URL.createObjectURL(b);
+      L.video.addEventListener('loadeddata',()=>{L.ready=true;},{once:true});
+      L.video.addEventListener('seeked',()=>{L.painted=true;},{once:true});
+      L.video.load();
+    })
+    .catch(()=>{ /* poster resta visibile */ });
+}
+
+/* ---- seek coalescente ---- */
+let pendingSeek=null, seeking=false;
+function seek(L,t){
+  if(!L.ready) return;
+  if(seeking){ pendingSeek=[L,t]; return; }
+  const d=L.video.duration;
+  if(!d || !isFinite(d)) return;
+  const target=clamp(t,0,d-0.033);
+  if(Math.abs(L.video.currentTime-target)<0.012) return;
+  seeking=true;
+  L.video.currentTime=target;
+  L.video.addEventListener('seeked',()=>{
+    seeking=false; L.painted=true;
+    if(pendingSeek){ const [pl,pt]=pendingSeek; pendingSeek=null; seek(pl,pt); }
+  },{once:true});
+}
+
+/* ---- loop di aggiornamento ---- */
+let active=-1;
+function update(){
+  const rect=film.getBoundingClientRect();
+  const total=film.offsetHeight-innerHeight;
+  const p=clamp(-rect.top/total,0,1);
+  const inFilm = rect.top<innerHeight*0.5 && rect.bottom>innerHeight*0.5;
+
+  chaptersEl.classList.toggle('live',inFilm);
+  progress.classList.toggle('live',inFilm);
+  progress.style.width=(p*100)+'%';
+
+  const n=SCENES.length;
+  const g=p*n;
+  const idx=clamp(Math.floor(g),0,n-1);
+  const local=clamp(g-idx,0,1);
+
+  if(idx!==active){
+    active=idx;
+    layers.forEach((L,i)=>{
+      const on = i===idx;
+      L.poster.classList.toggle('on', on && !L.painted);
+      if(L.video) L.video.classList.toggle('on', on && L.painted);
+    });
+    [idx-1,idx,idx+1].forEach(i=>{ if(i>=0&&i<n) ensureLoaded(i); });
+  }
+
+  const L=layers[idx];
+  if(L && L.ready){
+    seek(L, local*(L.video.duration||1));
+    if(L.painted){ L.poster.classList.remove('on'); L.video.classList.add('on'); }
+  }
+
+  /* testo dei capitoli: entra, resta a lungo, esce */
+  chapters.forEach((el,i)=>{
+    const raw=g-i;
+    let o,y;
+    if(raw<=0){ o=0; y=60; }
+    else if(raw<0.16){ const t=smooth(raw/0.16); o=t; y=lerp(60,0,t); }
+    else if(raw<0.84){ o=1; y=lerp(0,-26,(raw-0.16)/0.68); }
+    else if(raw<=1){ const t=smooth((raw-0.84)/0.16); o=1-t; y=lerp(-26,-70,t); }
+    else { o=0; y=-70; }
+    el.style.opacity=o;
+    el.style.transform=`translateY(${y}px)`;
+  });
+}
+
+if(!reduced){
+  let raf=null;
+  addEventListener('scroll',()=>{ if(raf) return; raf=requestAnimationFrame(()=>{update();raf=null;}); },{passive:true});
+  addEventListener('resize',update);
+  ensureLoaded(0);
+  update();
+}else{
+  chaptersEl.classList.add('live');
+  layers.forEach(L=>L.poster.classList.add('on'));
+}
+
+/* ---- nav ---- */
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60),{passive:true});
+document.querySelectorAll('.nav .menu button[data-go]').forEach(b=>{
+  b.addEventListener('click',()=>{
+    const i=+b.dataset.go;
+    const total=film.offsetHeight-innerHeight;
+    scrollTo({top:film.offsetTop+total*((i+0.35)/SCENES.length),behavior:'smooth'});
+  });
+});
+document.querySelectorAll('.nav .lang button').forEach(b=>{
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('.nav .lang button').forEach(x=>{x.classList.remove('on');x.removeAttribute('aria-current');});
+    b.classList.add('on'); b.setAttribute('aria-current','true');
+  });
+});
+</script>
+</body>
+</html>
