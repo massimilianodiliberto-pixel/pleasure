@@ -278,7 +278,18 @@ soggetto respira. Il moto deve chiudersi sul frame iniziale. Mai un evento narra
 
 ## Asset della serie definitiva
 
-### Frame
+### SERIE B — oro su nero (direzione alternativa, da confrontare)
+| Asset | Job | Note |
+|---|---|---|
+| Frame nascita | `61582039-a40b-4237-a345-fa8350bd7dc5` | Foglia come disegno di luce, goccia unica cosa reale |
+| Origine + vento | `c777bc3d-108b-491c-8ee9-66c348bcc127` | Vento sfasato, venature che pulsano, distacco |
+| Scienza | `74b43f93-348b-4f24-a6e8-b6bbad8b8a71` | Sosta, ingresso, particelle, nascita oro, cambio protagonista |
+
+Vantaggi misurabili della serie B: file più leggeri (il nero comprime molto meglio del
+bokeh verde), scrub più fluido (meno dettaglio da decodificare a ogni salto di frame),
+meno memoria occupata dalle clip già viste. Estetica e prestazioni coincidono.
+
+### SERIE A — verde naturale
 | Nome | Job | Note |
 |---|---|---|
 | **Nascita** (fotogramma zero) | `8659d7b9-bfb6-4679-8539-e4ad084bd3c2` | Linfa illuminata, micro-goccioline che si fondono, goccia trasparente |
