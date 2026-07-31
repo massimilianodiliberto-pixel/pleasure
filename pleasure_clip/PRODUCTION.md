@@ -101,6 +101,29 @@ Da **vuota a piena**, da **ricevente a donatrice**, da **acqua a prodotto a gest
 | 04 | `9da5d28b-deaa-4dc9-ad62-a40d9731207a` |
 | 05 | `fcc4b989-e73e-4916-9e71-c09468ba44bf` |
 
+## Loop d'attesa (idle) — nuova categoria
+
+Mentre il visitatore è **fermo su un capitolo**, la clip non si congela: entra in un
+**loop ambientale** che tiene il frame vivo. Elementi ai lati e sullo sfondo che
+respirano, particelle alla deriva, luce che pulsa.
+
+**Tecnica:** passare lo **stesso job_id** come `start_image` E `end_image`. Il modello
+costruisce un movimento che torna esattamente al punto di partenza → loop invisibile.
+
+**Regole del loop:** camera completamente ferma, nessun movimento di macchina. Solo il
+soggetto respira. Il moto deve chiudersi sul frame iniziale. Mai un evento narrativo
+(la goccia non cade mai in un loop), solo vita ambientale.
+
+| Loop | Capitolo | Contenuto |
+|---|---|---|
+| 1 | Origine | Foglia che respira, linfa che pulsa, goccia che trema senza cadere |
+| 2 | Scienza | Radici che pulsano, particelle alla deriva |
+| 3 | Metodo | Gocce satellite che orbitano e si sfiorano |
+| 4 | Academy | Onde di luce che si propagano e rientrano |
+| 5 | Rituali | Vapore che sale, fango che luccica |
+| 6 | Linee | Quattro firme di luce che respirano ai lati |
+| 7 | Family | Flacone fermo, oro interno che ruota lentissimo |
+
 ## Coda di produzione
 
 1. Frame finali capitoli 3-7 (metodo, academy, rituali, linee, family)
