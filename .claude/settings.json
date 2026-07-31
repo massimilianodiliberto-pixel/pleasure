@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__higgsfield__job_display",
+      "mcp__higgsfield__show_generations",
+      "mcp__higgsfield__balance",
+      "mcp__higgsfield__models_explore",
+      "mcp__higgsfield__generate_image",
+      "mcp__higgsfield__generate_video",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git status:*)",
+      "Bash(git log:*)",
+      "Bash(git diff:*)",
+      "Bash(sleep:*)"
+    ]
+  }
+}
