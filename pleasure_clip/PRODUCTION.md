@@ -158,6 +158,17 @@ tangibile. E il mood diventa luxury dal primo fotogramma invece di diventarlo sc
 
 Da confrontare con la versione verde naturale. Entrambe restano in catalogo.
 
+**Il vento — obbligatorio perché la natura di luce sia viva, non decorativa.**
+Senza movimento il disegno luminoso diventa un ornamento grafico. Con il vento diventa
+un organismo. Regole:
+- Oscillazione **lenta e irregolare**, mai un ciclo meccanico riconoscibile.
+- Gli elementi **non si muovono insieme**: le foglie lontane oscillano con ritardo e
+  ampiezza diversa da quelle vicine. È la sfasatura che il cervello legge come "vivo".
+- La **goccia risponde con un attimo di scarto**: trema, si allunga appena, si riassesta.
+- La **luce nelle venature pulsa** come linfa, non come elettricità: onde lente che
+  attraversano il disegno e svaniscono.
+- Ampiezza minima. Un accenno, non un ondeggiamento.
+
 ### IL CAMBIO DI PROTAGONISTA — cuore del capitolo Scienza
 
 L'oro **non arriva da fuori** e la goccia **non cambia colore**. L'oro era già dentro.
