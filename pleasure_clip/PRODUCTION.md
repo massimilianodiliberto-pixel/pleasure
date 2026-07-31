@@ -201,6 +201,36 @@ soggetto respira. Il moto deve chiudersi sul frame iniziale. Mai un evento narra
 3. Varianti alternative per ogni capitolo (mondi diversi, stesso arco)
 4. Serie video dalla nuova catena di frame
 
+## Asset della serie definitiva
+
+### Frame
+| Nome | Job | Note |
+|---|---|---|
+| **Nascita** (fotogramma zero) | `8659d7b9-bfb6-4679-8539-e4ad084bd3c2` | Linfa illuminata, micro-goccioline che si fondono, goccia trasparente |
+
+### Clip del viaggio
+| Capitolo | Job | Note |
+|---|---|---|
+| Origine v1 | `46020186-84ea-457d-b11a-e29645cd9471` | Scivolamento su foglia. Goccia però già formata |
+| Origine v2 | `f26bf547-8145-4272-90b7-c7d4834be1cd` | Dalla nascita: linfa, micro-gocce, distacco, scivolamento |
+| Scienza (scartata) | `1d0f0fb3-d20a-49c1-be9c-6d0f8bc360a8` | Scivola sulla radice: ora vietato |
+
+### Frame di capitolo con testo (solo valutazione, mai nei video)
+| Sezione | Job |
+|---|---|
+| Origine | `c6768882-6322-45fa-b845-eec005e014a2` |
+| Scienza | `7ecb55c4-072d-4f15-bf1e-34d4d438e12c` |
+| Metodo | `21bd9312-0642-4811-9a3c-fb649f9489f2` |
+| Academy | `af587f71-ee4a-4890-b63a-1fe7d2e78a13` |
+
+### Loop d'attesa (sospesi)
+| Capitolo | Job |
+|---|---|
+| Origine | `0c566be5-d14e-4490-856a-31b8b1643859` |
+| Scienza | `0e6995cd-35c8-455b-8dc1-2ad69628a79b` |
+| Metodo | `233963d5-c92b-4472-a888-cb447ffb50f4` |
+| Rituali | `dd0a8111-0762-435d-8bc2-4a8d5fb285d1` |
+
 ## Vincoli operativi
 
 - Unlim copre **1080p a 5 secondi**. Non copre 15s.
@@ -208,3 +238,6 @@ soggetto respira. Il moto deve chiudersi sul frame iniziale. Mai un evento narra
 - Upload e download verso Higgsfield bloccati dal proxy: i frame si passano ai video
   come `job_id`, non come file.
 - ffmpeg non disponibile in ambiente: encoding e montaggio a valle, fuori da qui.
+- **Permessi:** usare `show_generations` (una chiamata, molti risultati) invece di
+  `job_display` (una chiamata per job). Riduce di 5-6 volte le richieste di conferma.
+  `.claude/settings.json` contiene già l'allowlist, attiva al riavvio della sessione.
