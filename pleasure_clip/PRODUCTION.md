@@ -134,11 +134,12 @@ Mai: risalita, rimbalzo verso l'alto, sosta definitiva, cambio di direzione vert
 3. Le micro-goccioline **si uniscono** e formano UNA goccia.
 4. La goccia è **piccola e TRASPARENTE**, non dorata. L'oro arriva molto dopo.
 
-**Scienza — la goccia NON entra nel terreno.**
-Lo **oltrepassa**. Il sottosuolo, le radici e il micelio restano **sullo sfondo**,
-sfocati: da un effetto di luce si intuisce che lì c'è un potenziale, ma non è la nostra
-storia e non ci fermiamo. La goccia continua a scendere **nel buio**. Non atterra sulle
-radici, non ci scivola sopra, non le tocca.
+**Scienza — la goccia NON entra nel terreno, e le radici si possono togliere.**
+La goccia **oltrepassa** il suolo e continua a scendere **nel buio**. Non atterra sulle
+radici, non ci scivola sopra, non le tocca. Le radici e il micelio sono **facoltativi**:
+se compaiono restano solo sullo sfondo, sfocati e appena accennati da un effetto di
+luce. La versione preferita è **senza radici**: discesa pura nel buio, con la sola
+goccia in primo piano e pulviscolo dorato ai lati.
 
 ### LA SCIA DI VITA — firma della seconda metà
 
