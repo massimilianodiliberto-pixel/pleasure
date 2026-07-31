@@ -126,6 +126,25 @@ Movimenti ammessi, tutti discendenti:
 
 Mai: risalita, rimbalzo verso l'alto, sosta definitiva, cambio di direzione verticale.
 
+### LA SCIA DI VITA — firma della seconda metà
+
+Quando la goccia carica **scivola su una superficie**, per gravità vi **deposita i
+principi attivi**. E dove è passata, **la natura si risveglia**: il muschio secco
+rinverdisce, una radice spenta si illumina, una fibra si distende, minuscoli germogli
+si aprono nella scia. L'effetto segue la goccia con un attimo di ritardo, come una
+reazione, e resta acceso dietro di lei mentre continua a scendere.
+
+Perché è la chiave del film: dice *"impara a restituirle qualcosa in cambio"* senza una
+parola, e mostra la biotecnologia che agisce senza laboratori né diagrammi.
+
+**Condizione narrativa:** la goccia può dare solo dopo aver ricevuto.
+- Capitoli 1-2 (Origine, Scienza): è vuota e **prende**. Nessuna scia.
+- Capitolo 3 (Metodo): si carica ricombinando. **Prima scia, timida.**
+- Capitoli 4-7: è piena e **restituisce**. La scia è piena e visibile.
+
+Regole: la scia è sempre **oro e luce viva**, mai colore di linea. Il risveglio è
+sempre **positivo e generoso** — vita che nasce, mai danno che si ripara.
+
 ### Elementi laterali e di sfondo per capitolo
 | Capitolo | Cosa vive ai lati e dietro |
 |---|---|
