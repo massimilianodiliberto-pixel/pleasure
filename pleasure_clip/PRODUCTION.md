@@ -163,6 +163,31 @@ Non trasformiamo la natura, la **riveliamo**.
 fermarsi ed entrare dentro il soggetto**. È il "rallenta fermo" del diagramma del tilt:
 accelera fra i capitoli, si ferma sul capitolo. La sosta è il ritmo, non un'eccezione.
 
+### IL POTENZIAMENTO — cuore del capitolo Metodo
+
+La goccia d'oro, appena nata e ancora piccola, **incontra le biotecnologie avanzate**
+e ne esce potenziata: leggermente più grande, con **forze vive** al suo interno.
+
+La luce è la forza che potenzia. Entra come **corrente viva e organica**, mai come
+raggio, mai come fascio tecnologico.
+
+Sequenza, fedele al processo reale di iperfermentazione tradotto in linguaggio luxury:
+1. **Torbidità** — correnti di luce calda entrano nella goccia; dentro, la materia si
+   intorbida e comincia a muoversi da sola, moti convettivi lentissimi.
+2. **Densità** — le particelle si moltiplicano, la materia si addensa, ribolle appena.
+3. **Ambra** — il colore si approfondisce verso un oro più caldo e saturo.
+4. **Chiarificazione** — la torbidità si schiarisce e resta qualcosa di più concentrato,
+   più profondo, più luminoso di prima.
+5. **Il battito** — la goccia cresce leggermente e **pulsa una volta** con forza.
+   È il momento in cui si sente che è diventata potente.
+
+Perché è onesto: è davvero ciò che accade nella fermentazione (torbidità crescente,
+aumento di densità, viraggio all'ambra, filtrazione finale), tradotto e non documentato.
+Regge una domanda tecnica in fiera.
+
+**Vietato:** bolle da laboratorio, bioreattori, vetreria, schiume industriali. La
+fermentazione reale è brutta e industriale: noi la traduciamo, non la riprendiamo.
+
 ### LA SCIA DI VITA — firma della seconda metà
 
 Quando la goccia carica **scivola su una superficie**, per gravità vi **deposita i
