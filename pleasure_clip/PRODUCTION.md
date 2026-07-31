@@ -276,6 +276,24 @@ soggetto respira. Il moto deve chiudersi sul frame iniziale. Mai un evento narra
 3. Varianti alternative per ogni capitolo (mondi diversi, stesso arco)
 4. Serie video dalla nuova catena di frame
 
+## VIDEO-PONTE — raccordi tra i capitoli
+
+Clip intermedie che stanno **in mezzo** ai sette capitoli, per rendere il film davvero
+continuo invece che solo coerente nello stile. Ognuna segue lo stesso protagonista del
+momento: goccia trasparente, goccia d'oro, o prodotto.
+
+| Ponte | Da → A | Contenuto |
+|---|---|---|
+| 1→2 | Origine → Scienza | La goccia trasparente finisce di cadere e rallenta fino a sospendersi |
+| 2→3 | Scienza → Metodo | La goccia d'oro appena nata riprende a scendere nel buio |
+| 3→4 | Metodo → Academy | Dopo il battito, la goccia potenziata prosegue la discesa |
+| 4→5 | Academy → Rituali | Dalla trasmissione di luce verso la materia del rito |
+| 5→6 | Rituali → Linee | Lasciato il fango, di nuovo nel vuoto nero |
+| 6→7 | Linee → Family | Avvicinamento finale, il flacone che cresce dal basso |
+
+**Regola:** un ponte non introduce mai eventi nuovi. È solo transito. Velocità costante,
+nessuna sorpresa, nessun elemento narrativo. Serve a cucire, non a raccontare.
+
 ## Asset della serie definitiva
 
 ### SERIE B — oro su nero (direzione alternativa, da confrontare)
