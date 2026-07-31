@@ -101,7 +101,43 @@ Da **vuota a piena**, da **ricevente a donatrice**, da **acqua a prodotto a gest
 | 04 | `9da5d28b-deaa-4dc9-ad62-a40d9731207a` |
 | 05 | `fcc4b989-e73e-4916-9e71-c09468ba44bf` |
 
-## Loop d'attesa (idle) — nuova categoria
+## PRIORITÀ ASSOLUTA — Il viaggio della goccia
+
+**I loop d'attesa sono sospesi.** Tutta la capacità va al film di discesa.
+
+La cosa che conta: **il tilt discendente che segue la goccia**, e mentre scende, ai
+**lati** e sullo **sfondo** vivono elementi che richiamano il concept del capitolo che
+stiamo attraversando. La goccia resta l'eroe al centro; il significato del capitolo
+sta attorno a lei, in secondo piano, sfocato ma leggibile.
+
+### Il repertorio del movimento
+
+La goccia non è sempre in caduta libera. Può **posarsi su un elemento e scivolare**,
+poi staccarsi e riprendere a cadere. Scivolare è scendere: la continuità regge.
+Questo dà fisicità, contatto con la materia e varietà di ritmo.
+
+Movimenti ammessi, tutti discendenti:
+- **caduta libera** — la goccia attraversa il vuoto
+- **scivolamento** — atterra su una foglia, una radice, una pietra, una corteccia,
+  e scorre lungo la superficie prima di staccarsi dal bordo
+- **rotolamento** — corre lungo una nervatura, un filamento, una scanalatura
+- **sospensione breve** — resta appesa a un bordo, si allunga, si stacca
+- **assorbimento e riemersione** — attraversa un velo d'acqua o di vapore e ne esce
+
+Mai: risalita, rimbalzo verso l'alto, sosta definitiva, cambio di direzione verticale.
+
+### Elementi laterali e di sfondo per capitolo
+| Capitolo | Cosa vive ai lati e dietro |
+|---|---|
+| Origine | Foglie, corteccia, muschio, spore di luce. Verde naturale che si spegne scendendo |
+| Scienza | Radici illuminate, filamenti di micelio, minerali che brillano, acqua che filtra |
+| Metodo | Altre gocce che si avvicinano e si fondono, fili di luce che si formano e sciolgono |
+| Academy | Costellazione di gocce che si accendono a catena, luce che si propaga |
+| Rituali | Ciotola col fango, pennello, vapore, mani che mescolano — visti passando |
+| Linee | Quattro presenze di luce ai lati che scandiscono la discesa |
+| Family | Il collo del flacone che si avvicina dal basso, oro che sale a incontrarla |
+
+## Loop d'attesa (idle) — SOSPESO
 
 Mentre il visitatore è **fermo su un capitolo**, la clip non si congela: entra in un
 **loop ambientale** che tiene il frame vivo. Elementi ai lati e sullo sfondo che
