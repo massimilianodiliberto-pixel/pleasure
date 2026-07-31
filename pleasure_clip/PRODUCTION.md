@@ -141,6 +141,28 @@ se compaiono restano solo sullo sfondo, sfocati e appena accennati da un effetto
 luce. La versione preferita è **senza radici**: discesa pura nel buio, con la sola
 goccia in primo piano e pulviscolo dorato ai lati.
 
+### IL CAMBIO DI PROTAGONISTA — cuore del capitolo Scienza
+
+L'oro **non arriva da fuori** e la goccia **non cambia colore**. L'oro era già dentro.
+
+1. La discesa **rallenta fino a fermarsi**. La goccia trasparente resta sospesa in aria.
+2. La camera **entra dentro di lei**. Dentro vediamo i principi attivi come **minuscole
+   particelle di luce** che si muovono, vive, in sospensione nell'acqua.
+3. Le particelle **convergono** e formano una **piccola goccia d'oro** dentro quella
+   trasparente.
+4. La goccia d'oro **esce** da quella d'acqua.
+5. **Da qui seguiamo lei.** La goccia d'acqua era il veicolo; la goccia d'oro è
+   l'essenza, fatta solo di principi attivi. Il protagonista è cambiato senza uno stacco.
+6. La goccia d'oro riprende a cadere e nel capitolo successivo **incontra le
+   biotecnologie avanzate**.
+
+Perché funziona: dice *"La natura ha già la risposta"* mostrandolo invece di affermarlo.
+Non trasformiamo la natura, la **riveliamo**.
+
+**Nota sulla regola della camera:** la camera non risale mai, ma **può rallentare,
+fermarsi ed entrare dentro il soggetto**. È il "rallenta fermo" del diagramma del tilt:
+accelera fra i capitoli, si ferma sul capitolo. La sosta è il ritmo, non un'eccezione.
+
 ### LA SCIA DI VITA — firma della seconda metà
 
 Quando la goccia carica **scivola su una superficie**, per gravità vi **deposita i
