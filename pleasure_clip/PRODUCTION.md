@@ -126,6 +126,20 @@ Movimenti ammessi, tutti discendenti:
 
 Mai: risalita, rimbalzo verso l'alto, sosta definitiva, cambio di direzione verticale.
 
+### Correzioni vincolanti sui primi due capitoli
+
+**Origine — la nascita è un processo, non un punto di partenza.**
+1. Prima la **linfa dentro la foglia si illumina**, scorre nelle nervature.
+2. Da quella luce, sulla punta, si formano **micro-goccioline minuscole**.
+3. Le micro-goccioline **si uniscono** e formano UNA goccia.
+4. La goccia è **piccola e TRASPARENTE**, non dorata. L'oro arriva molto dopo.
+
+**Scienza — la goccia NON entra nel terreno.**
+Lo **oltrepassa**. Il sottosuolo, le radici e il micelio restano **sullo sfondo**,
+sfocati: da un effetto di luce si intuisce che lì c'è un potenziale, ma non è la nostra
+storia e non ci fermiamo. La goccia continua a scendere **nel buio**. Non atterra sulle
+radici, non ci scivola sopra, non le tocca.
+
 ### LA SCIA DI VITA — firma della seconda metà
 
 Quando la goccia carica **scivola su una superficie**, per gravità vi **deposita i
