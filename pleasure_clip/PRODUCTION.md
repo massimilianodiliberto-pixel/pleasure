@@ -23,8 +23,33 @@ Nessuna approvazione richiesta durante la produzione. Si sceglie a fine sessione
 
 Natura come **essenza**, prodotto come **vetrina**. La goccia raccoglie ciò che la
 natura ha già, la biotecnologia lo libera, il metodo lo ricombina, il rito lo applica.
-Elemento di tensione disponibile: **l'inquinamento / il danno** — entra e esce a
-seconda del capitolo, è ciò da cui la natura difende.
+
+**Mai elementi negativi.** Niente inquinamento, niente danno, niente degrado, niente
+contrasto sporco o freddo. Il viaggio è luminoso dall'inizio alla fine. Si racconta ciò
+che il prodotto dà, mai ciò da cui difende.
+
+### Registro: BIO NATURAL LUXURY
+
+Le tre parole vanno tenute insieme, sempre, in ogni frame:
+
+- **BIO** — è vivo. Cresce, pulsa, respira, si trasforma. Mai inerte, mai sintetico,
+  mai meccanico. La luce si comporta come linfa, non come energia elettrica.
+- **NATURAL** — materia vera. Foglia, linfa, radice, acqua, legno, pietra, fango,
+  vapore. Texture organiche e imperfette. Nessuna superficie industriale.
+- **LUXURY** — lentezza, profondità, oro, buio profondo, luce radente, spazio negativo
+  generoso. Un solo soggetto, mai affollato. Il tempo di guardare.
+
+Test su ogni frame: *potrebbe stare in una campagna L'Oréal luxury?* Se no, si rifà.
+
+### Arco della goccia
+Da **vuota a piena**, da **ricevente a donatrice**, da **acqua a prodotto a gesto**.
+1. Origine — trasparente, potenziale puro
+2. Scienza — **riceve** dalla natura
+3. Metodo — **ricombina**: altre gocce si fondono in lei
+4. Academy — la luce **esce** da lei e accende le altre
+5. Rituali — incontra la materia: fango, pennello, vapore, mani
+6. Linee — il sistema si presenta
+7. Family — entra nel flacone, che si chiude e viene usato
 
 ## Sezioni del sito → nome clip
 
