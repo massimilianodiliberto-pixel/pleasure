@@ -141,6 +141,23 @@ se compaiono restano solo sullo sfondo, sfocati e appena accennati da un effetto
 luce. La versione preferita è **senza radici**: discesa pura nel buio, con la sola
 goccia in primo piano e pulviscolo dorato ai lati.
 
+### VARIANTE ORO SU NERO — direzione alternativa da valutare
+
+Tutti i brand del haircare naturale mostrano il **verde**: foglia verde, bokeh verde,
+luce di bosco. È diventato un genere, e dentro un genere non ci si distingue.
+
+Variante: **la natura è disegno di luce dorata su nero assoluto.**
+- Le foglie esistono solo come **contorni e venature** tracciati in oro luminoso.
+  Nessuna superficie solida, nessun verde, nessuna texture fotografica.
+- Lo sfondo è **nero pieno** fin dall'inizio, non solo nella seconda metà.
+- **L'unica cosa reale è la goccia**: acqua vera, rifrazione vera, tensione superficiale
+  vera. Materia fotografica in mezzo a un mondo di luce.
+
+La gerarchia si costruisce da sola: lo sguardo va sulla goccia perché è l'unica cosa
+tangibile. E il mood diventa luxury dal primo fotogramma invece di diventarlo scendendo.
+
+Da confrontare con la versione verde naturale. Entrambe restano in catalogo.
+
 ### IL CAMBIO DI PROTAGONISTA — cuore del capitolo Scienza
 
 L'oro **non arriva da fuori** e la goccia **non cambia colore**. L'oro era già dentro.
