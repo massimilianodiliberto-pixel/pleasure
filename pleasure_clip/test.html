@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PLEASURE · Test scroll-scrub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&family=Inter:wght@200;300&family=JetBrains+Mono:wght@300&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#1A1A1C;--gold:#B8956A;--gold-l:#D4B283;--cream:#F0E8D8;--muted:#888880}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--cream);font-family:'Inter',sans-serif;font-weight:300;overflow-x:hidden}
+video{display:block}
+
+/* diagnostica */
+#hud{position:fixed;top:10px;left:10px;z-index:200;font-family:'JetBrains Mono',monospace;font-size:11px;line-height:1.7;
+  background:rgba(0,0,0,.72);border:1px solid rgba(184,149,106,.3);border-radius:4px;padding:10px 13px;color:var(--gold-l);
+  backdrop-filter:blur(8px);pointer-events:none;min-width:210px}
+#hud b{color:var(--cream);font-weight:400}
+#hud .ok{color:#8FBF7F}
+#hud .warn{color:#D4B283}
+#hud .err{color:#C97B6B}
+
+.stage{position:sticky;top:0;height:100vh;overflow:hidden;background:var(--bg)}
+.stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .3s}
+.stage video.on{opacity:1}
+.stage .poster{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:var(--muted);transition:opacity .4s}
+.stage .poster.off{opacity:0}
+.stage::after{content:'';position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(to bottom,rgba(26,26,28,.5) 0%,rgba(26,26,28,0) 28%,rgba(26,26,28,0) 42%,rgba(26,26,28,.9) 88%,var(--bg) 100%)}
+
+#track{position:relative}
+
+.caption{position:fixed;left:0;right:0;bottom:0;height:44vh;z-index:60;pointer-events:none;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 max(40px,5vw) 4vh;
+  opacity:0;transition:opacity .5s}
+.caption.on{opacity:1}
+.caption .eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.caption h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(30px,4vw,54px);line-height:1.05;margin-bottom:16px;max-width:15em}
+.caption h2 em{font-style:italic;color:var(--gold-l)}
+.caption p{font-size:17px;line-height:1.55;color:var(--muted);max-width:32em}
+
+.bar{position:fixed;left:0;bottom:0;height:2px;background:var(--gold);z-index:80;width:0}
+
+.end{padding:22vh 40px;text-align:center;background:var(--bg);position:relative;z-index:5}
+.end h3{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(26px,3.4vw,44px);line-height:1.15;color:var(--cream);max-width:18em;margin:0 auto}
+.end h3 em{font-style:italic;color:var(--gold-l)}
+.end p{margin-top:20px;color:var(--muted);font-size:15px}
+.intro{height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;text-align:center;padding:0 30px}
+.intro h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(34px,5vw,64px);letter-spacing:.02em}
+.intro span{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.intro .hint{margin-top:26px;font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--muted);font-size:15px}
+</style>
+</head>
+<body>
+
+<div id="hud">
+  <div>fetch &nbsp;<b id="h-mode">…</b></div>
+  <div>video &nbsp;<b id="h-ready">…</b></div>
+  <div>durata <b id="h-dur">–</b></div>
+  <div>scroll <b id="h-prog">0%</b></div>
+  <div>frame &nbsp;<b id="h-time">0.00s</b></div>
+  <div>seek &nbsp;&nbsp;<b id="h-seek">0</b></div>
+  <div>fps &nbsp;&nbsp;&nbsp;<b id="h-fps">–</b></div>
+</div>
+
+<section class="intro">
+  <span>Test tecnico</span>
+  <h1>Lo scroll muove il film,<br/>fotogramma per fotogramma.</h1>
+  <div class="hint">scorri lentamente — e poi torna indietro</div>
+</section>
+
+<section id="track">
+  <div class="stage" id="stage">
+    <div class="poster" id="poster">caricamento del film…</div>
+  </div>
+</section>
+
+<div class="caption" id="caption">
+  <div class="eyebrow">L'Origine</div>
+  <h2>Dalla terra,<br/>prima che dal <em>laboratorio.</em></h2>
+  <p>PLEASURE non estrae dalla natura. La ascolta. E impara a restituirle qualcosa in cambio.</p>
+</div>
+
+<div class="bar" id="bar"></div>
+
+<section class="end">
+  <h3>Se lo scroll è rimasto incollato al dito,<br/>anche <em>all'indietro</em>, il motore regge.</h3>
+  <p>Clip di prova: capitolo Origine — serie oro su nero</p>
+</section>
+
+<script>
+const CLIP = 'https://d8j0ntlcm91z4.cloudfront.net/user_3EqZRmmurE97QKooYEIkHEqwFz6/hf_20260731_130111_c777bc3d-108b-491c-8ee9-66c348bcc127.mp4';
+const VH = 420; /* altezza di scroll dedicata alla clip, in vh */
+
+const track   = document.getElementById('track');
+const stage   = document.getElementById('stage');
+const poster  = document.getElementById('poster');
+const caption = document.getElementById('caption');
+const bar     = document.getElementById('bar');
+const H = id => document.getElementById(id);
+
+track.style.height = VH + 'vh';
+
+const video = document.createElement('video');
+video.muted = true; video.playsInline = true; video.preload = 'auto';
+video.setAttribute('muted',''); video.setAttribute('playsinline','');
+video.crossOrigin = 'anonymous';
+stage.appendChild(video);
+
+let ready = false, painted = false, seeks = 0;
+
+/* Blob = seek molto più preciso. Se il CORS lo impedisce, si ripiega su src diretto. */
+function load(){
+  H('h-mode').textContent = 'blob…';
+  fetch(CLIP, {mode:'cors'})
+    .then(r => { if(!r.ok) throw new Error(r.status); return r.blob(); })
+    .then(b => { video.src = URL.createObjectURL(b); H('h-mode').innerHTML = '<span class="ok">blob</span>'; })
+    .catch(() => { video.removeAttribute('crossorigin'); video.src = CLIP;
+                   H('h-mode').innerHTML = '<span class="warn">diretto</span>'; });
+}
+video.addEventListener('loadeddata', () => {
+  ready = true;
+  H('h-ready').innerHTML = '<span class="ok">pronto</span>';
+  H('h-dur').textContent = video.duration.toFixed(2) + 's';
+  update();
+});
+video.addEventListener('error', () => { H('h-ready').innerHTML = '<span class="err">errore</span>'; });
+load();
+
+/* seek coalescente: una richiesta alla volta, l'ultima vince */
+let seeking = false, queued = null;
+function seek(t){
+  if(!ready) return;
+  const d = video.duration; if(!d || !isFinite(d)) return;
+  const target = Math.max(0, Math.min(t, d - 0.033));
+  if(Math.abs(video.currentTime - target) < 0.012) return;
+  if(seeking){ queued = target; return; }
+  seeking = true; seeks++; H('h-seek').textContent = seeks;
+  video.currentTime = target;
+}
+video.addEventListener('seeked', () => {
+  seeking = false;
+  if(!painted){ painted = true; poster.classList.add('off'); video.classList.add('on'); }
+  H('h-time').textContent = video.currentTime.toFixed(2) + 's';
+  if(queued !== null){ const q = queued; queued = null; seek(q); }
+});
+
+function update(){
+  const r = track.getBoundingClientRect();
+  const total = track.offsetHeight - innerHeight;
+  const p = Math.max(0, Math.min(-r.top / total, 1));
+  const inView = r.top < innerHeight * 0.5 && r.bottom > innerHeight * 0.5;
+
+  caption.classList.toggle('on', inView && p > 0.12);
+  bar.style.width = (p * 100) + '%';
+  H('h-prog').textContent = Math.round(p * 100) + '%';
+
+  if(ready) seek(p * video.duration);
+}
+
+let raf = null;
+addEventListener('scroll', () => {
+  if(raf) return;
+  raf = requestAnimationFrame(() => { update(); raf = null; });
+}, {passive:true});
+addEventListener('resize', update);
+update();
+
+/* fps reale durante lo scorrimento */
+let frames = 0, last = performance.now();
+(function tick(){
+  frames++;
+  const now = performance.now();
+  if(now - last >= 1000){ H('h-fps').textContent = frames; frames = 0; last = now; }
+  requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>
